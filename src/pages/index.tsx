@@ -7,6 +7,7 @@ import Navbar from "@/components/navbar/navbar";
 import Card from "@/components/card/card";
 import SectionCards from "@/components/card/section-cards";
 import { getPopularVideos, getVideos } from "@/lib/videos";
+import { magic } from "@/lib/magic-client";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function Home({
   productivityVideos,
   popularVideos,
 }: any) {
+  console.log({ magic });
   return (
     <div className={styles.container}>
       <Head>
@@ -32,7 +34,7 @@ export default function Home({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.main}>
-        <Navbar username="ankita@ank.com" />
+        <Navbar />
         <Banner
           title="Clifford the red dog"
           subTitle="a very cute dog"
